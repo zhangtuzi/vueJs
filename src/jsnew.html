@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>jsnew</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      var newArray=[1,2,3,4,5];
+      var newSplice=newArray.splice(1,4);
+      // console.log(newSplice);
+      var newArray1=[1,[11,12,13],[23,24,25],1];
+      var newSplice1=newArray1.splice(1,1);
+      // console.log(newSplice1);
+      var newArray2=[1,3,2,4,7,9,6,8,5,0];
+      // console.log(newArray2.length);
+      var newArray3=[];
+      function px(){
+        var lg3=newArray3.length;
+        var mb=newArray2[0];
+        var mbi=0;
+        for(var i=0;i<newArray2.length;i++){
+          if(newArray2[i]<mb){
+            mb=newArray2[i];
+            mbi=i;
+          }
+        }
+        newArray3[lg3+1]=(newArray2.splice(mbi,1));
+
+        if(newArray2.length>0){
+          px();
+        }
+      }
+      px();
+      console.log(newArray3);
+    </script>
+  </body>
+</html>
