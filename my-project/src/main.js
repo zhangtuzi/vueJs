@@ -13,3 +13,9 @@ new Vue({
   template: '<App/>',
   components: { App }
 })
+new Vue({
+  el: '#app2',
+  data: {
+    mainMsg1: '我是普通内容'
+  }
+})
